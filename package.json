@@ -1,0 +1,22 @@
+{
+  "name": "surf-it",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "debug": "^2.6.9",
+    "ejs": "^2.7.4",
+    "express": "^4.16.4",
+    "http-errors": "^1.6.3",
+    "mongoose": "^5.10.3",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "locus": "^2.0.4"
+  }
+}
