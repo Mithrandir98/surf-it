@@ -13,8 +13,17 @@ const postsRouter = require("./routes/posts");
 const reviewsRouter = require("./routes/reviews");
 const user = require("./models/user");
 const session = require('express-session');
+const mongoose = require('mongoose');
 
 const app = express();
+
+//connect database
+mongoose.connect('mongodb://localhost:27017/surf-it', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => {
+  console.log("we're connected!");
+});
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
